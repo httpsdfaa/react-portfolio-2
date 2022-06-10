@@ -1,0 +1,74 @@
+header.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+section.icons-social, section.menu, section.logo {
+    display: flex;
+    width: 75px;
+    justify-content: center;
+    gap: 20px;
+}
+
+span.logo {
+    background: #dededf;
+    padding: 7px;
+    border-radius: 999px;
+    font-size: 18px;
+    color: #3b82f6;
+}
+
+nav.nav {
+    display: none; /* RETIRAR DEPOIS */
+    position: absolute;
+    width: 100%;
+    background: #3b82f6;
+    top: 100px;
+    border-bottom-left-radius: 3%;
+    border-bottom-right-radius: 3%;
+    box-shadow: 20px 18px 20px 0 rgb(0 0 0 / 10%);
+}
+
+nav.nav > ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    gap: 30px;
+    font-weight: 300;
+
+}
+
+nav.nav > ul a {
+    border-bottom: 1px solid #0000;
+}
+
+span.logo:hover {
+    color: #000;
+    transition-duration: 0.7s;
+    cursor: pointer;
+}
+
+section.menu > svg:hover {
+    width: 38px;
+    height: 38px;
+    transition-duration: 0.2s;
+}
+
+section.menu > svg:active {
+    width: 25px;
+    height: 25px;
+    fill: rgb(211, 211, 211);
+}
+
+section.icons-social > a > svg:hover {
+    fill: #3d0668;
+    transition-duration: 0.3s;
+}
+
+nav.nav > ul > a:hover {
+    color: #333333;
+    transition-duration: 0.3s;
+}

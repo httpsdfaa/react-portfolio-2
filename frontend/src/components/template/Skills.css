@@ -1,0 +1,38 @@
+div.div-li-icon {
+    display: flex;
+    gap: 25px;
+}
+
+div.frontend h3, ul, div.backend h3, ul {
+    color: #fff;
+    font-weight: 300;
+}
+
+section.skills h1 {
+    font-size: 35px;
+}
+
+section.skills {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+section.skills h1 {
+    align-self: center;
+}
+
+section.skills div.backend {
+    align-self: flex-end;
+}
+
+div.backend {
+    padding-bottom: 45px;
+}
+
+@media (min-width: 1146px) {
+    section.skills {
+        padding: 0 300px;
+    }
+}

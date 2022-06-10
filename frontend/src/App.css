@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+:root {
+    --bg-background-global: linear-gradient(#3b82f6, #581c87);
+    --ft-poppins-regular: 'Poppins', sans-serif;
+    --card-shadow: 5px 14px 20px 5px rgb(0 0 0 / 30%);
+    --photo-shadow: 0 25px 50px -12px rgba(0,0,0,.25);
+    --ft-color: #FFF;
+}
+
+a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.App {
+    display: grid;
+    grid-template-rows: 100px auto auto;
+    background: var(--bg-background-global); 
+    font-family: var(--ft-poppins-regular);
+    color: var(--ft-color);
+    min-width: 375px;
+    overflow-x: visible;
+}
