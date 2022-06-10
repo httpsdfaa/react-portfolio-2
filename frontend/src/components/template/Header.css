@@ -20,7 +20,7 @@ span.logo {
 }
 
 nav.nav {
-    display: none; /* RETIRAR DEPOIS */
+    display: block;
     position: absolute;
     width: 100%;
     background: #3b82f6;
@@ -28,6 +28,21 @@ nav.nav {
     border-bottom-left-radius: 3%;
     border-bottom-right-radius: 3%;
     box-shadow: 20px 18px 20px 0 rgb(0 0 0 / 10%);
+    z-index: 1;
+    overflow: hidden; 
+    animation-name: slideNav !important; 
+    animation-duration: 0.6s;
+    animation-fill-mode:forwards;
+}
+
+@keyframes slideNav {
+    from {
+        height: 0; 
+    }
+
+    to {
+        height: 250px;
+    }
 }
 
 nav.nav > ul {
@@ -71,4 +86,34 @@ section.icons-social > a > svg:hover {
 nav.nav > ul > a:hover {
     color: #333333;
     transition-duration: 0.3s;
+}
+
+@media (min-width: 650px) {
+    nav.nav {
+        display: flex;
+        position: relative;
+        width: auto;
+        background: #3b82f6;
+        top: 0;
+        border-radius: none;
+        box-shadow: none;
+    }
+
+    nav.nav > ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        font-weight: 300;
+    
+    }
+
+    nav.nav > ul a:nth-child(2){
+        margin: 0 40px;
+    }
+
+    section.menu {
+        display: none;
+    }
 }
