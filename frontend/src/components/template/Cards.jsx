@@ -11,9 +11,9 @@ import reactIcon from '../../assets/img/react-icon.png';
 
 
 export default props =>
-    <section className="cards-body">
+    <section className="cards-body" id="portfolio">
         <section className="card">
-            <img src={esteticaAppImg} alt="card" cardImg="esteticaWidth" />
+            <img src={esteticaAppImg} alt="card" cardimg="esteticaWidth" />
             <h2>Estética WebApp</h2>
             <span>Em desenvolvimento</span><br/>
             <ul>
@@ -32,7 +32,7 @@ export default props =>
             </ul>
         </section>
         <section className="card">
-            <img src={portfoliov2Img} alt="card" cardImg="portfolioWidth" />
+            <img src={portfoliov2Img} alt="card" cardimg="portfolioWidth" />
             <h2>Portfólio pessoal</h2>
             <span>Desenvolvimento finalizado</span><br/>
             <ul>
@@ -51,7 +51,7 @@ export default props =>
             </ul>
         </section>
         <section className="card">
-            <img src={calculoImcImg} alt="card" cardImg="calculoImcWidth" />
+            <img src={calculoImcImg} alt="card" cardimg="calculoImcWidth" />
             <h2>Cálculo IMC</h2>
             <span>Desenvolvimento finalizado</span><br/>
             <ul>

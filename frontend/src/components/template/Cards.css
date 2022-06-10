@@ -46,12 +46,12 @@ div.div-li-icon {
     height: 387.75px;
 }
 
-[cardImg="calculoImcWidth"] {
+[cardimg="calculoImcWidth"] {
     width: 250px;
     height: 411.58px;
 }
 
-[cardImg] {
+[cardimg] {
     border-radius: 10px;
     box-shadow: var(--photo-shadow);
     margin-bottom: 25px;

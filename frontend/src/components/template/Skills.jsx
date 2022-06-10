@@ -10,7 +10,7 @@ import nodejsImg from '../../assets/img/nodejs-icon.png';
 import mysqlImg from '../../assets/img/mysql-icon.png';
 
 export default props =>
-    <section className="skills">
+    <section className="skills" id="skills">
         <h1>Skills</h1>
         <div className="frontend">
             <h3>FRONTEND</h3>

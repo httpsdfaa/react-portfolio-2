@@ -2,7 +2,7 @@ import React from 'react';
 import './Footer.css';
 
 export default props =>
-    <footer className="footer">
+    <footer className="footer" id='contact'>
         <section className="form">
             <h1>Contate-me</h1>
             <form action="/">

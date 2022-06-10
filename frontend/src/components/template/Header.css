@@ -97,6 +97,9 @@ nav.nav > ul > a:hover {
         top: 0;
         border-radius: none;
         box-shadow: none;
+        animation-name: none !important; 
+        animation-duration: none;
+        animation-fill-mode: none;
     }
 
     nav.nav > ul {
