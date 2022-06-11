@@ -8,7 +8,7 @@ const config = require('./config');
 // })
 
 
-const PORT = config.devPort.DEV_PORT
+const PORT = config.devPort.DEV_PORT || 3001;
 app.listen(PORT, () => {
-    console.log("Servidor sendo executado...");
+    console.log(`Servidor sendo executado na porta ${PORT}`);
 })
