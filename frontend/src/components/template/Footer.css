@@ -45,8 +45,21 @@ input.inputSubmit {
     background: rgb(0, 90, 255);
     border: none;
     border-radius: 8px;
-    margin-top: 20px;
+    margin: 20px 0;
     cursor: pointer;
+}
+
+span.errorRequired {
+    color: red;
+    margin-bottom: 50px;
+}
+
+span.successful {
+    color: rgb(3, 197, 3);
+}
+
+div.error {
+    min-height: 50px;
 }
 
 @media (min-width: 900px) {
