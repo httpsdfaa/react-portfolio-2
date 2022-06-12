@@ -1,11 +1,18 @@
 const express = require('express');
-const app = express();
-const config = require('./config');
-// const db = require('./db')
+const cors = require('cors');
 
-// app.use((req, res) => {
-//     res.send("funcionando")
-// })
+const bodyParser = require('body-parser');
+const config = require('./config');
+const app = express();
+
+const jsonParser = bodyParser.json();
+const urlencodedParser = bodyParser.urlencoded({ extended: true });
+app.use(cors())
+
+
+app.post("/", jsonParser, urlencodedParser, (req, res) => {
+    // console.log(req.body)
+})
 
 
 const PORT = config.devPort.DEV_PORT || 3001;
