@@ -1,7 +1,7 @@
 const mysql = require('mysql2');
 const config = require('./config');
 
-module.exports = (name, surname, email) => {
+module.exports = async (name, surname, email) => {
     const connection = mysql.createConnection({
         host: config.database.host,
         user: config.database.user,
@@ -9,8 +9,8 @@ module.exports = (name, surname, email) => {
         database: config.database.database
     })
 
-    // const insert_into = 'INSERT INTO `form` (`name`, `surname`, `email`, `registration`) VALUES(?, ?, ?, ?)'
-    // const values = [name, surname, email, new Date()]
+    const insert_into = 'INSERT INTO `form` (`name`, `surname`, `email`, `registration`) VALUES(?, ?, ?, ?)'
+    const values = [name, surname, email, new Date()]
 
     connection.query(insert_into, values, function (err, results, fields) {
         console.log(results)
@@ -18,5 +18,5 @@ module.exports = (name, surname, email) => {
         console.log(err)
     })
 
-    connection.end()
+    await connection.end();
 }
