@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Header.css';
 import { List, Github, Linkedin } from 'react-bootstrap-icons';
 
-export default props => {
+export default function Header() {
 
 
     const [toggle, setToggle] = useState(true ? window.innerWidth >= 650: false);
