@@ -3,15 +3,38 @@ const cors = require('cors');
 
 const bodyParser = require('body-parser');
 const config = require('./config');
-const app = express();
+const db = require('./db')
 
-const jsonParser = bodyParser.json();
-const urlencodedParser = bodyParser.urlencoded({ extended: true });
+
+const app = express();
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }))
+
+// const jsonParser = bodyParser.json();
+// const urlencodedParser = bodyParser.urlencoded({ extended: false });
 app.use(cors())
 
 
-app.post("/", jsonParser, urlencodedParser, (req, res) => {
-    // console.log(req.body)
+app.post("/api/form", (req, res) => {
+
+    const dataBody = {
+        name: req.body.name,
+        surname: req.body.surname,
+        email: req.body.email,
+        menssage: req.body.message
+    }
+
+    const sendDB = () => {
+        db(
+            dataBody.name,
+            dataBody.surname,
+            dataBody.email,
+        )
+    }
+
+    sendDB();
+
+    res.send("aceito")
 })
 
 
