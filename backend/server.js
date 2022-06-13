@@ -17,24 +17,26 @@ app.use(cors())
 
 app.post("/api/form", (req, res) => {
 
+    const { name, surname, email, message } = req.body
+
     const dataBody = {
-        name: req.body.name,
-        surname: req.body.surname,
-        email: req.body.email,
-        menssage: req.body.message
+        name,
+        surname,
+        email,
+        message
     }
 
-    const sendDB = () => {
-        db(
-            dataBody.name,
-            dataBody.surname,
-            dataBody.email,
-        )
-    }
+    // const sendDB = () => {
+    //     db(
+    //         dataBody.name,
+    //         dataBody.surname,
+    //         dataBody.email,
+    //     )
+    // }
 
-    sendDB();
+    // sendDB();
 
-    res.send("aceito")
+    res.send("dados enviado")
 })
 
 
