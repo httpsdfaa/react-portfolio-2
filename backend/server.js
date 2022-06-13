@@ -1,19 +1,17 @@
 const express = require('express');
 const cors = require('cors');
-
 const bodyParser = require('body-parser');
-const config = require('./config');
-const db = require('./db')
 
+const config = require('./config');
+const db = require('./db');
+const sendEmail = require('./nodemailer');
 
 const app = express();
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }))
 
-// const jsonParser = bodyParser.json();
-// const urlencodedParser = bodyParser.urlencoded({ extended: false });
 app.use(cors())
-
 
 app.post("/api/form", (req, res) => {
 
@@ -26,17 +24,25 @@ app.post("/api/form", (req, res) => {
         message
     }
 
-    // const sendDB = () => {
-    //     db(
-    //         dataBody.name,
-    //         dataBody.surname,
-    //         dataBody.email,
-    //     )
-    // }
+    const sendDB = () => {
+        db(
+            dataBody.name,
+            dataBody.surname,
+            dataBody.email,
+        )
+    }
 
-    // sendDB();
-
+    sendDB();
     res.send("dados enviado")
+
+    sendEmail(
+        dataBody.email,
+        dataBody.name,
+        dataBody.surname,
+        dataBody.message
+    ).catch(console.error)
+
+    
 })
 
 
