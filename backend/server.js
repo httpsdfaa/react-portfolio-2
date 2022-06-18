@@ -13,6 +13,10 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 app.use(cors())
 
+app.get('/',(req, res) => {
+    res.send("server running...")
+})
+
 app.post("/api/form", (req, res) => {
 
     const { name, surname, email, message } = req.body
@@ -47,6 +51,6 @@ app.post("/api/form", (req, res) => {
 
 
 const PORT = config.devPort.DEV_PORT || 3001;
-app.listen(PORT, () => {
+app.listen(3001, () => {
     console.log(`Servidor sendo executado na porta ${PORT}`);
 })
