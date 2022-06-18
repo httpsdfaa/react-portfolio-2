@@ -50,7 +50,7 @@ app.post("/api/form", (req, res) => {
 })
 
 
-const PORT = config.devPort.DEV_PORT || 3001;
+const PORT = config.devPort || 3001;
 app.listen(3001, () => {
     console.log(`Servidor sendo executado na porta ${PORT}`);
 })
