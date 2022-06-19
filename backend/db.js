@@ -18,5 +18,5 @@ module.exports = async (name, surname, email) => {
         console.log(err)
     })
 
-    await connection.end();
+    connection.end();
 }
