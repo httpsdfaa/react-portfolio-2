@@ -13,7 +13,9 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 app.use(cors())
 
-app.post("/api/form", (req, res) => {
+app.get('/', )
+
+app.post("/auth/form", (req, res) => {
 
     const { name, surname, email, message } = req.body
 
@@ -47,6 +49,6 @@ app.post("/api/form", (req, res) => {
 
 
 const PORT = config.devPort || 3001
-app.listen(PORT, () => {
+app.listen(443, () => {
     console.log(`Servidor sendo executado na porta ${PORT}`);
 })

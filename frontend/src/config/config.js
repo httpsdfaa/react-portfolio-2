@@ -1,5 +1,5 @@
 module.exports = {
     development: {
-        url: 'http://adaptameta.com:3001/api/form'
+        url: 'https://www.adaptameta.com/auth/form'
     }
 }
