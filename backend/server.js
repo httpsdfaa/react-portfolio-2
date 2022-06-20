@@ -1,3 +1,5 @@
+const dotenv = require('dotenv');
+dotenv.config()
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -48,7 +50,7 @@ app.post("/auth/form", (req, res) => {
 })
 
 
-const PORT = config.devPort || 3001
-app.listen(443, () => {
+const PORT = process.env.PORT || 3001
+app.listen(PORT, () => {
     console.log(`Servidor sendo executado na porta ${PORT}`);
 })
